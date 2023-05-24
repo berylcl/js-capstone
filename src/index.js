@@ -1,5 +1,7 @@
 import './style.css';
-import { getMeals, fetchMealDetails, getComments} from './modules/api-comments.js';
+import { getMeals} from './modules/api-comments.js';
+import { truncateDescription} from './modules/truncate descripion.js';
+import { fetchMealDetails} from './modules/mealdetails.js';
 
 const displayMeals = async () => {
   const meals = await getMeals();
@@ -27,14 +29,6 @@ const createMeal = (meal) => `
       </div>
     </div>
   `;
-const truncateDescription = (description, wordCount) => {
-  const words = description.split(' ');
-  if (words.length <= wordCount) {
-    return description;
-  }
-  const truncatedWords = words.slice(0, wordCount);
-  return truncatedWords.join(' ') + '...';
-};
 
 const showCommentsPopup = async (mealId) => {
   // Create the popup element
@@ -110,28 +104,6 @@ const showCommentsPopup = async (mealId) => {
     console.error('Error fetching meal details:', error);
   }
 };
-
-document.addEventListener('click', (event) => {
-  if (event.target.classList.contains('comments')) {
-    const { mealId } = event.target.closest('.meal').dataset;
-    showCommentsPopup(mealId);
-  }
-});
-
-document.addEventListener('click', (event) => {
-  if (event.target.classList.contains('comments')) {
-    const { mealId } = event.target.closest('.meal').dataset;
-    showCommentsPopup(mealId);
-  }
-});
-
-
-document.addEventListener('click', (event) => {
-  if (event.target.classList.contains('comments')) {
-    const { mealId } = event.target.closest('.meal').dataset;
-    showCommentsPopup(mealId);
-  }
-});
 
 document.addEventListener('click', (event) => {
   if (event.target.classList.contains('comments')) {
