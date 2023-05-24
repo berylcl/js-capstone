@@ -131,7 +131,6 @@ span {
   z-index: 1;
   display: none;
   backdrop-filter: blur(10px);
-  height: 100px;
 }
 
 .launch-card {
@@ -147,6 +146,7 @@ span {
   z-index: 10;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   overflow-y: auto;
+  margin-top: 3%;
 }
 
 /* Style for the close button */

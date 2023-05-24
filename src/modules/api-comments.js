@@ -6,11 +6,17 @@ export const getMeals = async () => {
   return meals;
 };
 
+
 export const getComments = async (apiId, itemId) => {
-  const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${apiId}/comments?item_id=${itemId}`;
+  const url = `${baseApi}/comments?item_id=${itemId}`;
 
   try {
     const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error('Failed to retrieve comments');
+    }
+
     const data = await response.json();
     return data;
   } catch (error) {
