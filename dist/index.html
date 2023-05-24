@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meals App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap"
+      rel="stylesheet"
+    />
+  <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Meals App</h1>
+        <a href="#" class="active">Meals(9)</a>
+        <a href="#">About</a>
+      </div>
+    </header>
+    <main>
+      <section class="section-meals">
+        <div class="meals container"></div>
+      </section>
+    </main>
+    <section id="launch-modal">
+      <div class="wrapper">
+        <div class="launch-card">
+          <div class="launch-img">
+            <img src="" alt="meal image">
+          </div>
+          <div id="comment">
+            <button class="close-modal">&times;</button>
+            <h2>Comments (<span class="comments-count"></span>)</h2>
+            <ul class="commentList"></ul>
+            <div class="entry">
+              <form>
+                <div class="form-group">
+                  <label for="txt-visitor">Name:</label>
+                  <input id="txt-visitor" type="text" placeholder="Your name">
+                </div>
+                <div class="form-group">
+                  <label for="txt-comment">Comment:</label>
+                  <input id="txt-comment" type="text" placeholder="Your comment">
+                </div>
+                <input id="launch-id" type="hidden">
+                <div class="form-group">
+                  <input class="comments" id="btn-save-comment" type="button" value="Comment">
+                </div>
+              </form>
+            </div>
+          </div>
+      </div>
+      </div>
+    </section>
+
+
+    <footer>
+      <div class="container">Created by Gakii and Yousef under MIT license</div>
+    </footer>
+  </body>
+</html>
